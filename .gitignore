@@ -1,0 +1,12 @@
+# Nix build outputs
+result
+result-*
+
+# Direnv
+.direnv/
+
+# Editors
+.vscode
+
+# Flake lock (optional, you might want to track this)
+# flake.lock
