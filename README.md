@@ -4,7 +4,7 @@
 
 ## Solon's WSL-Nix Configuration
 
-_A reproducible developer environment using NixOS on WSL with Home Manager and Nix Flakes_
+_A reproducible environment using NixOS on WSL with Home Manager and Nix Flakes_
 
 </div>
 
