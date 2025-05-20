@@ -17,15 +17,32 @@
     pkgs.zsh
     pkgs.starship
     pkgs.zsh-autocomplete
+    pkgs.xdg-utils  # Add this for browser opening support
   ];
 
   home.file = {};
-  home.sessionVariables = {};
+  
+  # This is to solve the issue with opening URLs in the browser, and fit read only filesystem issues
+  home.sessionVariables = {
+    XDG_CONFIG_HOME = "${config.home.homeDirectory}/.config";
+    GIT_CONFIG_GLOBAL = "${config.home.homeDirectory}/.config/git/config";
+  };
 
   programs.git = {
     enable = true;
     userName = "1Solon";
     userEmail = "Solonerus@gmail.com";
+    extraConfig = {
+      "protocol.https".allow = "always";
+    };
+  };
+
+  # Add GitHub CLI configuration
+  programs.gh = {
+    enable = true;
+    settings = {
+      git_protocol = "https";
+    };
   };
 
   programs.zsh = {
