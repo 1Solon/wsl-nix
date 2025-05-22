@@ -20,10 +20,12 @@
   users.defaultUserShell = pkgs.zsh;
   
   # Docker configuration
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-  };
+  wsl.extraBin = with pkgs; [
+    {src = "${uutils-coreutils-noprefix}/bin/cat";}
+    {src = "${uutils-coreutils-noprefix}/bin/whoami";}
+    {src = "${busybox}/bin/addgroup";}
+    {src = "${su}/bin/groupadd";}
+  ];
   
   # Add user to docker group
   users.users.nixos.extraGroups = [ "docker" ];
