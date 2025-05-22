@@ -23,6 +23,7 @@
     pkgs.go-task
     pkgs.gnumake
     pkgs.go
+    pkgs.cue
   ];
 
   home.file = {};
