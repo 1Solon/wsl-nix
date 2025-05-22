@@ -18,6 +18,15 @@
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
+  
+  # Docker configuration
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+  };
+  
+  # Add user to docker group
+  users.users.nixos.extraGroups = [ "docker" ];
 
   # Enable experimental features for Nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
