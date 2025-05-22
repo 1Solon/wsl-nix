@@ -17,7 +17,11 @@
     pkgs.zsh
     pkgs.starship
     pkgs.zsh-autocomplete
-    pkgs.xdg-utils  # Add this for browser opening support
+    pkgs.xdg-utils
+    pkgs.podman
+    pkgs.podman-compose
+    pkgs.go-task
+    pkgs.gnumake
   ];
 
   home.file = {};
