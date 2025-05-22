@@ -18,8 +18,8 @@
     pkgs.starship
     pkgs.zsh-autocomplete
     pkgs.xdg-utils
-    pkgs.podman
-    pkgs.podman-compose
+    pkgs.docker
+    pkgs.docker-compose
     pkgs.go-task
     pkgs.gnumake
     pkgs.go
