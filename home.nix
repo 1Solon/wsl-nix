@@ -22,6 +22,7 @@
     pkgs.podman-compose
     pkgs.go-task
     pkgs.gnumake
+    pkgs.go
   ];
 
   home.file = {};
