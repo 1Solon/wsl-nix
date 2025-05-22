@@ -39,6 +39,7 @@
     userEmail = "Solonerus@gmail.com";
     extraConfig = {
       "protocol.https".allow = "always";
+      "push".autoSetupRemote = true;
     };
   };
 
