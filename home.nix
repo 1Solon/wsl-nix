@@ -41,6 +41,7 @@
     extraConfig = {
       "protocol.https".allow = "always";
       "push".autoSetupRemote = true;
+      "init".defaultBranch = "main";
     };
   };
 
